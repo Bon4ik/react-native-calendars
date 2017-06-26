@@ -45,6 +45,8 @@ export default function(theme={}) {
     },
     exercisePanel: {
       justifyContent: 'space-between',
+      flexDirection: 'row',
+      marginTop: 5,
     },
   });
 }

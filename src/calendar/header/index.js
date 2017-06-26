@@ -115,10 +115,10 @@ class CalendarHeader extends Component {
           {weekDaysNames.map(day => (
             <Text key={day} style={this.style.dayHeader}>{day}</Text>
           ))}
-          <View style={this.style.exercisePanel}>
+        </View>
+        <View style={this.style.exercisePanel}>
             {this.renderExercisePanel()}
           </View>
-        </View>
       </View>
     );
   }
