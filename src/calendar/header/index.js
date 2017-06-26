@@ -50,19 +50,19 @@ class CalendarHeader extends Component {
     const currentDay = currentData.getDay() - 1;
     // const days = [1, 2, 3, 4, 5, 6, 7];
     const days = [
-      {regular: IC_PULL, accent: IC_PULL_ACCENT}, // 1
-      {regular: IC_HIIT, accent: IC_HIIT_ACCENT}, // 2
-      {regular: IC_LEGS, accent: IC_LEGS_ACCENT}, // 3
-      {regular: IC_HIIT, accent: IC_HIIT_ACCENT}, // 4
-      {regular: IC_PUSH, accent: IC_PUSH_ACCENT}, // 5
-      {regular: IC_HIIT, accent: IC_HIIT_ACCENT}, // 6
-      {regular: IC_REST, accent: IC_REST_ACCENT}, // 7
+      {regular: IC_PULL, accent: IC_PULL_ACCENT, id: 1}, // 1
+      {regular: IC_HIIT, accent: IC_HIIT_ACCENT, id: 2}, // 2
+      {regular: IC_LEGS, accent: IC_LEGS_ACCENT, id: 3}, // 3
+      {regular: IC_HIIT, accent: IC_HIIT_ACCENT, id: 4}, // 4
+      {regular: IC_PUSH, accent: IC_PUSH_ACCENT, id: 5}, // 5
+      {regular: IC_HIIT, accent: IC_HIIT_ACCENT, id: 6}, // 6
+      {regular: IC_REST, accent: IC_REST_ACCENT, id: 7}, // 7
     ];
     return days.map((item, index) => {
       if (index === currentDay) {
-        return <View><Image source={item.accent} /></View>;
+        return <View key={item.id}><Image source={item.accent} /></View>;
       }
-      return <View><Image source={item.regular} /></View>;
+      return <View key={item.id}><Image source={item.regular} /></View>;
     });
   }
 
