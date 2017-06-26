@@ -1,0 +1,10 @@
+export const IC_HIIT = require('./ic-hiit.png');
+export const IC_HIIT_ACCENT = require('./ic-hiit-accent.png');
+export const IC_LEGS = require('./ic-legs.png');
+export const IC_LEGS_ACCENT = require('./ic-legs-accent.png');
+export const IC_PULL = require('./ic-pull.png');
+export const IC_PULL_ACCENT = require('./ic-pull-accent.png');
+export const IC_PUSH = require('./ic-push.png');
+export const IC_PUSH_ACCENT = require('./ic-push-accent.png');
+export const IC_REST = require('./ic-rest.png');
+export const IC_REST_ACCENT = require('./ic-rest-accent.png');

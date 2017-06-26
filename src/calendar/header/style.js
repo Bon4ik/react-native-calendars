@@ -42,6 +42,9 @@ export default function(theme={}) {
       textAlign: 'center',
       fontSize: 13,
       color: appStyle.textSectionTitleColor
-    }
+    },
+    exercisePanel: {
+      justifyContent: 'space-between',
+    },
   });
 }

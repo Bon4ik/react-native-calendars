@@ -3,6 +3,18 @@ import { ActivityIndicator } from 'react-native';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 import styleConstructor from './style';
 import { weekDayNames } from '../../dateutils';
+import {
+  IC_HIIT,
+  IC_HIIT_ACCENT,
+  IC_PULL,
+  IC_PULL_ACCENT,
+  IC_LEGS,
+  IC_LEGS_ACCENT,
+  IC_PUSH,
+  IC_PUSH_ACCENT,
+  IC_REST,
+  IC_REST_ACCENT,
+} from '../img';
 
 class CalendarHeader extends Component {
   constructor(props) {
@@ -31,6 +43,27 @@ class CalendarHeader extends Component {
       return true;
     }
     return false;
+  }
+
+  renderExercisePanel = () => {
+    const currentData = new Date();
+    const currentDay = currentData.getDay() - 1;
+    // const days = [1, 2, 3, 4, 5, 6, 7];
+    const days = [
+      {regular: IC_PULL, accent: IC_PULL_ACCENT}, // 1
+      {regular: IC_HIIT, accent: IC_HIIT_ACCENT}, // 2
+      {regular: IC_LEGS, accent: IC_LEGS_ACCENT}, // 3
+      {regular: IC_HIIT, accent: IC_HIIT_ACCENT}, // 4
+      {regular: IC_PUSH, accent: IC_PUSH_ACCENT}, // 5
+      {regular: IC_HIIT, accent: IC_HIIT_ACCENT}, // 6
+      {regular: IC_REST, accent: IC_REST_ACCENT}, // 7
+    ];
+    return days.map((item, index) => {
+      if (index === currentDay) {
+        return <View><Image source={item.accent} /></View>;
+      }
+      return <View><Image source={item.regular} /></View>;
+    });
   }
 
   render() {
@@ -82,6 +115,9 @@ class CalendarHeader extends Component {
           {weekDaysNames.map(day => (
             <Text key={day} style={this.style.dayHeader}>{day}</Text>
           ))}
+          <View style={this.style.exercisePanel}>
+            {this.renderExercisePanel()}
+          </View>
         </View>
       </View>
     );
