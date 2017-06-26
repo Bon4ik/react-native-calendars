@@ -44,7 +44,7 @@ export default function(theme={}) {
       color: appStyle.textSectionTitleColor
     },
     exercisePanel: {
-      justifyContent: 'space-between',
+      justifyContent: 'space-around',
       flexDirection: 'row',
       marginTop: 5,
     },
