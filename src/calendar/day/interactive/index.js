@@ -105,9 +105,6 @@ class Day extends Component {
       containerStyle.push({
         borderRadius: 17
       });
-      textStyle.push({
-        color: '#fff',
-      });
 
       const flags = this.markingStyle;
       if (flags.textStyle) {
@@ -155,6 +152,9 @@ class Day extends Component {
         };
         containerStyle.push({
           backgroundColor: flags.endingDay.color
+        });
+         textStyle.push({
+          color: '#fff',
         });
       }
 
