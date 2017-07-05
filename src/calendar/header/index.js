@@ -46,8 +46,8 @@ class CalendarHeader extends Component {
   }
 
   renderExercisePanel = () => {
-    const currentData = new Day();
-    const currentDay = currentData.getDate();
+    const currentData = new Date();
+    const currentDay = currentData.getDay();
     // const days = [1, 2, 3, 4, 5, 6, 7];
     const days = [
       {regular: IC_REST, accent: IC_REST_ACCENT, id: 7}, // 0
