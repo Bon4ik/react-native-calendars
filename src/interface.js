@@ -8,7 +8,7 @@ function padNumber(n) {
 }
 
 export function xdateToData(xdate) {
-  const dateString = xdate.toString('yyyy-MM-dd');
+  const dateString = xdate.toString('yyyy/MM/dd');
   return {
     year: xdate.getFullYear(),
     month: xdate.getMonth() + 1,
@@ -24,7 +24,7 @@ export function parseDate(d) {
   } else if (d.timestamp) { // conventional data timestamp
     return XDate(d.timestamp, true);
   } else if (d instanceof XDate) { // xdate
-    return XDate(d.toString('yyyy-MM-dd'), true);
+    return XDate(d.toString('yyyy/MM/dd'), true);
   } else if (d.getTime) { // javascript date
     const dateString = d.getFullYear() + '-' + padNumber((d.getMonth() + 1)) + '-' + padNumber(d.getDate());
     return XDate(dateString, true);
