@@ -10,6 +10,7 @@ export default function styleConstructor(theme={}) {
       flex: 1,
       alignItems: 'center',
       alignSelf: 'stretch',
+      borderRadius: 17,
       marginLeft: -1
     },
     base: {
